@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jauge circulaire</title>
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            
+          </div>
+          <div class="col-sm-6 centerPerso">
+            <div class="pie">
+                <svg>
+                    <circle fill="red" r="20%" cx="50%" cy="50%" />
+                </svg>
+                <div class="nb"></div>
+            </div>          </div>
+          <div class="col-sm-3">
+            <h3>Column 3</h3>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+      </div>
+
+
+   
+
+    <script>
+        
+        var root = document.documentElement;
+        setInterval(test, 200);
+
+        function test(){
+            //value = getRandomInt(99);
+            value = 50;
+            var DOMStyle = getComputedStyle(root);
+            root.style.setProperty('--nb-percent', value);
+            root.style.setProperty('--nb-percent-str', '"'+value+'%"');
+        }
+
+        function getRandomInt(max) {
+             return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        
+    </script>
+</body>
+</html>
